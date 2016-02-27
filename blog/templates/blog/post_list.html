@@ -3,7 +3,11 @@
 		<title>Kitty World Domination</title>
 	</head>
 	<body>
-		<p>Cats</p>
-		<p>MEOW</p>
+		{% for post in posts %}
+		<div>
+			<p>Published: {{post.published_date}}</p>
+			<h1><a href="">{{post.title}}</a></h1>
+			<p>{{post.text|linebreaks}}</p>
+		{% endfor %}
 	</body>
 </html>
